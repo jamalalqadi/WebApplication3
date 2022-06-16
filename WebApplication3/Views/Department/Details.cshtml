@@ -1,0 +1,20 @@
+﻿@model WebApplication3.Models.Entities.Department
+
+@{
+    ViewData["Title"] = "Details Department";
+}
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i> Edit</a>
+    <a class="btn btn-info " asp-action="Index"> Back to List <i class="bi bi-arrow-right-circle"></i></a>
+</div>
+

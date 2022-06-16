@@ -1,0 +1,9 @@
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.AssemblyInfo.cs
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.RazorAssemblyInfo.cache
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.RazorAssemblyInfo.cs
+C:\Users\Dell\source\repos\WebApplication3\WebApplication3\obj\Debug\net5.0\ProjectEmployee8.csprojAssemblyReference.cache

@@ -1,0 +1,44 @@
+﻿@model WebApplication3.Models.Entities.PersonalData
+@{
+    var tilte = Model == null ? "Create" : Model.Id > 0 ? "Edit" : "Create";
+    ViewData["Title"] = tilte +"PersonalData";
+}
+@section Section_btn{
+    <div class="btn-toolbar">
+        <a  class="btn btn-sm btn-info" asp-action="Details" asp-route-EmployeeId="Model.EmployeeId">
+            Back to List <i class="bi bi-arrow-right-circle"></i>
+        </a>
+    </div>
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateOrEditPersonalData" enctype="multipart/form-data"  >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmployeeId" />
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImgUrl" class="w-100"></label>
+                <div class="custom-file  mb-2">
+                    <input type="file" accept="image/*" asp-for="ImgUrl" class="custom-file-input"
+                           onchange="document.getElementById('Picture').src =window.URL.createObjectURL(this.files[0]);$('#label_Picture').html(this.files[0].name);" />
+                    <label id="label_Picture" asp-for="ImgUrl" class="custom-file-label"> Choose picture</label>
+                    <span asp-validation-for="ImgUrl" class="text-danger"></span>
+                </div>
+                <div class="card">
+                    <img id="Picture" src="/Uploads/@(Model.ImgUrl??"avatar-male.jpg")" style="height: 250px" alt="Picture" asp-append-version="true">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> @tilte</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

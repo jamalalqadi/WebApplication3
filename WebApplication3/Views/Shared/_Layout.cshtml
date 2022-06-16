@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>@ViewData["Title"] - WebApplication3</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootswatch/cerulean/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/lib/bootstrap/dashboard/dashboard.css" rel="stylesheet" />
+    <link href="~/lib/toastr.js/toastr.min.css" rel="stylesheet" />
+    <link href="~/lib/limonte-sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    @RenderSection("Css", required: false)
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body >
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Project Employee</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="form-inline my-2 my-lg-0" style="background-color:aliceblue;border:2px solid green;font-size:large;margin:auto;padding:5px;" id="them">
+            <a id="light" style=" background-color: darkslategrey;color:aliceblue; font-size: large; margin: 5px; padding: 5px;" id="them" >Dark</a> 
+            <a id="reset" style="        background-color:aquamarine;color:black;
+        
+        font-size: large;
+        margin: 5px;
+        padding: 5px;" >reset</a> 
+            <a id="increases" style="        background-color:darkolivegreen;color:aliceblue;
+       
+        font-size: large;
+        margin: 5px;
+        padding: 5px;"  >increase </a>
+        </div>
+        <script>
+         
+        </script>
+
+        <form asp-action="Search" asp-controller="Employee" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-1" id="search1" name="term" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <partial name="_LoginPartial" />
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3" >
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-controller="Home" asp-action="Index">
+                                <span data-feather="home"></span>
+                                Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="City" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Cities
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Job" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Department" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Departments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Role" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Roles
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Employee" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Employees
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Users" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Manger Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Roles" asp-action="Index">
+                                <span data-feather="layers"></span>
+                                Manger Roles
+                            </a>
+                        </li>
+                        }
+
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">@ViewData["Title"]</h1>
+                    @RenderSection("Section_btn", required: false)
+                </div>
+                <partial name="_Notification" />
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/toastr.js/toastr.min.js"></script>
+    <script src="~/lib/limonte-sweetalert2/sweetalert2.min.js"></script>>
+    <script src="~/lib/bootstrap/dashboard/feather.min.js"></script>
+    <script src="~/lib/bootstrap/dashboard/dashboard.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#light").click(function () {
+            modifyThem("light");
+
+        });
+        $("#dark").click(function () {
+            modifyThem("dark");
+
+        });
+        $("#increase").click(function () {
+            modifyThem("reset");
+
+        });
+        $("#increase").click(function () {
+            window.alert("<h1>jamal alqadi</h1>");
+
+        });
+
+        function modifyThem(flag) {
+            var divI = $("#them");
+            var courentB = parseInt(divI.css("background-color"));
+            var courentS = parseInt(divI.css("font-size:"));
+            var courentC = parseInt(divI.css("color"));
+            if (flag == "light") {
+                courentB = "wheat";
+                courentC = "black";
+            } else
+                if (flag == "dark") {
+                    courentB = "black";
+                    courentC = "white";
+                } else
+                    if (flag == "increase") {
+                        courentS += 3;
+
+                    }
+            divI.css("background-color", courentB);
+            divI.css("color", courentC);
+            divI.css("font-size", courentS);
+
+
+        }
+    });
+
+</script>
